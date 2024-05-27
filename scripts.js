@@ -20,16 +20,14 @@ if(preSetpasscode) {
     }
 }
 
-var authEndpoint = 'https://4c8no4s7ie.execute-api.us-west-1.amazonaws.com/default/videosdkdev'
+var authEndpoint = 'https://or116ttpz8.execute-api.us-west-1.amazonaws.com/default/videosdk'
 
 var config = {
     videoSDKJWT: '',
-    sessionName: '',
-    userName: '',
-    sessionPasscode: '',
-    features: ['video', 'audio', 'settings', 'users', 'chat', 'share'],
-    webEndpoint: 'zoomdev.us',
-    advancedTelemetry: true
+    sessionName: 'SessionA',
+    userName: 'UserA',
+    sessionPasscode: 'abc123',
+    features: ['video', 'audio', 'settings', 'users', 'chat', 'share']
 };
 
 window.getVideoSDKJWT = getVideoSDKJWT
