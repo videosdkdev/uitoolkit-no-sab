@@ -27,7 +27,13 @@ var config = {
     sessionName: 'SessionA',
     userName: 'UserA',
     sessionPasscode: 'abc123',
-    features: ['video', 'audio', 'settings', 'users', 'chat', 'share']
+    features: ['preview', 'video', 'audio', 'settings', 'users', 'chat', 'share', 'feedback', 'ltt', 'crc', 'pstn', 'recording', 'livestream'],
+    options: { init: {}, audio: {}, video: {}, share: {}},
+    virtualBackground: {
+       allowVirtualBackground: true,
+       allowVirtualBackgroundUpload: true,
+       virtualBackgrounds: ['https://images.unsplash.com/photo-1715490187538-30a365fa05bd?q=80&w=1945&auto=format&fit=crop']
+    }
 };
 
 window.getVideoSDKJWT = getVideoSDKJWT
@@ -36,7 +42,6 @@ function getVideoSDKJWT() {
     document.getElementById('nameRequired').style.display = 'none'
     document.getElementById('sessionNameRequired').style.display = 'none'
     document.getElementById('passcodeLength').style.display = 'none'
-    document.getElementById('rating').style.display = 'none'
     
     config.userName = document.getElementById('yourName').value
     config.sessionName = document.getElementById('sessionName').value
@@ -84,5 +89,4 @@ var sessionClosed = (() => {
     uitoolkit.closeSession(sessionContainer)
     document.getElementById('header').style.display = 'block'
     document.getElementById('join-flow').style.display = 'block'
-    document.getElementById('rating').style.display = 'block'
 })
