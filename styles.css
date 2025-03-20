@@ -3,13 +3,13 @@
 }
 
 body {
-    height: auto;
+    height: 100svh;
     font-family: 'Roboto', sans-serif;
     margin: 0;
 }
 
 main {
-
+    height: 100%;
 }
 
 #sessionContainer {
@@ -19,8 +19,9 @@ main {
     width: 100%;
     /* max-height does something strange. Try to make it always responsive */
     /* max-height: 100vh; */
-    max-width: 1200px;
-    margin: auto;
+    /* max-width: 1200px; */
+    height: 100%;
+    /* margin: auto; */
 }
 
 /* the ui toolkit needs to remain the same height no matter the view */
@@ -58,7 +59,9 @@ app-previewkit {
 
 .header {
     margin-top: 50px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .header img {
@@ -74,7 +77,9 @@ app-previewkit {
 .join-flow input {
     border: 1px solid gray;
 }
-
+.join-flow select {
+    border: 1px solid gray;
+}
 .join-flow input, .join-flow button, select {
     width: 100%;
     margin-bottom: 10px;
