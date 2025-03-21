@@ -126,9 +126,15 @@ var sessionClosed = () => {
   if (sessionTimer) {
     clearTimeout(sessionTimer);
   }
-  document.getElementById("header").style.display = "flex";
-  document.getElementById("join-flow").style.display = "block";
-  document.getElementById("rating").style.display = "block";
+  if (document.getElementById("header")) {
+    document.getElementById("header").style.display = "flex";
+  }
+  if (document.getElementById("join-flow")) {
+    document.getElementById("join-flow").style.display = "block";
+  }
+  if (document.getElementById("rating")) {
+    document.getElementById("rating").style.display = "block";
+  }
   const joinButton = document.querySelector(".join-flow button");
   joinButton.disabled = false;
   joinButton.textContent = "Join Session";
